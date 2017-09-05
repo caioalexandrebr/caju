@@ -1,0 +1,22 @@
+{
+  "name": "caju",
+  "homepage": "https://github.com/caioalexandrebr/caju",
+  "authors": [
+    "Caio Alexandre <caioalexandre.br@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "jquery": "^3.2.1"
+  }
+}

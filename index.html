@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br" ng-app>
   	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,161 +16,43 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no" />
 	</head>
   	<body>
-	  	<header>
-	  		<div class="header-mobile">
-		  			<a href="/" ><div class="header-logo-mobile">
-			  				<h1>Logo</h1>
-			  		</div></a>
-		  			<nav>
-						<label for="drop" class="toggle">&#9776</label>
-						<input type="checkbox" id="drop" />
-						<ul class="menu">
-							<li><a href="">Conheça</a></li>
-							<li><a href="">Vantagens</a></li>
-							<li><a href="">Cases</a></li>
-							<li><a href="">Fale Conosco</a></li>
-						</ul>
-					</nav>
-	  		</div>
-	  		<!--  Header - Mobile  -->
+		<div ng-include="'header.html'"></div>
 
-
-	  		<div class="container">		
-		  		<div class="header-desktop">
-		  			<a href="/" ><div class="logo">
-		  				<h1>Logo</h1>
-		  			</div></a>
-		    		<div class="header-phone-desktop">
-		  				+55 (888) 760 1940
-		  			</div>
-		  			<div class="header-nav-desktop">
-		  				<ul>
-		  				    <li><a href="">Conheça</a></li>
-		  				    <li><a href="">Vantagens</a></li>
-		  				    <li><a href="">Cases</a></li>
-		  				    <li><a href="">Fale Conosco</a></li>
-		  				</ul>
-		  			</div>
-		  		</div>
-		 	 	<!--  Header - Desktop  -->
-
-
-		  		<div class="header-title">
-			  		<h1>Better Lorem Ipsum</h1>
-			  		<h2>O teste é uma ferramenta projetada para organizaçães
-			que desejam crescer otimizando recursos.</h2>
-					<h3>Os campos com ( * ) são de obrigatoriedade.</h3>
+		<div class="header-footer-desktop">
+			<div class="header-footer-center-desktop">
+				<div class="header-footer-box1-desktop">
+					<div class="footer-header-img1"></div>
+					<h1>Gestão Médica</h1>
+					<h2>Desenvolvido para ser uma ferramenta de apoio aos processos e decisões...</h2>
 				</div>
-		  		<div class="formheader">
-					<form name="form" method="post" action="sentsuccessfully.html" onSubmit="return validacao();">
-				 		<input type="text" name="name" placeholder="NOME*" autocomplete="off" required x-moz-errormessage="Preencha o seu nome.">
-				  		<input type="email" name="email" placeholder="E-MAIL*" autocomplete="off" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
-				  		<input type="text" name="phone" id="phone" placeholder="TELEFONE" maxlength="15" autocomplete="off">
-				  		<input type="text" name="mens" placeholder="MENSAGEM" maxlength="500" autocomplete="off" required x-moz-errormessage="Preencha sua mensagem.">
-				  		<input name="submit" type="submit" value="Enviar" class="bt">
-					</form>
-		  		</div>
-		  		<!--  Formulário  -->
-		  		<div class="macbook"></div>
-	  		</div>
-	  	</header>
 
-	  	<div class="header-footer-desktop">
-	  		<div class="header-footer-center-desktop">
-	  			<div class="header-footer-box1-desktop">
-	  				<div class="footer-header-img1"></div>
-	  				<h1>Gestão Médica</h1>
-	  				<h2>Desenvolvido para ser uma ferramenta de apoio aos processos e decisões...</h2>
-	  			</div>
-
-	  			<div class="header-footer-box-desktop">
-	  				<div class="footer-header-img2"></div>
-	  				<h1>Monitoramento</h1>
-	  				<h2>A inteligência de gestão de processos que aprendemos nos vários anos...</h2>
-	  			</div>
-	  			<div class="header-footer-box-desktop">
-	  				<div class="footer-header-img3"></div>
-	  				<h1>Integração</h1>
-	  				<h2>Os processos administrativos e médicos são únicos e precisam de uma visão...</h2>
-	  			</div>
-	  			<div class="header-footer-box-desktop">
-	  				<div class="footer-header-img4"></div>
-	  				<h1>Usabilidade</h1>
-	  				<h2>Precisa ser fácil de usar. Não queremos profissionais de sistemas...</h2>
-	  			</div>
-	  		</div>
-	  	</div>
-	  	<!--  Footer Header  -->
-
-
-	  	<div class="container">
-	  		<div class="section-diferencial">
-	  			<br><br><br>
-			  	<h1>Nosso diferenciais<br> competitivos</h1>
-				
-				<h2><font color="#555a69">Speed up the line with quick, easy modifiers</font><br> Light soy, extra noodles—item modifiers make it simple and<br>efficient to get your customers’ orders just right.</h2><br><br><br>
+				<div class="header-footer-box-desktop">
+					<div class="footer-header-img2"></div>
+					<h1>Monitoramento</h1>
+					<h2>A inteligência de gestão de processos que aprendemos nos vários anos...</h2>
+				</div>
+				<div class="header-footer-box-desktop">
+					<div class="footer-header-img3"></div>
+					<h1>Integração</h1>
+					<h2>Os processos administrativos e médicos são únicos e precisam de uma visão...</h2>
+				</div>
+				<div class="header-footer-box-desktop">
+					<div class="footer-header-img4"></div>
+					<h1>Usabilidade</h1>
+					<h2>Precisa ser fácil de usar. Não queremos profissionais de sistemas...</h2>
+				</div>
 			</div>
+		</div>
+		<!--  Footer Header  -->
 
-	 		<div class="row">
-	 			<div class="col-sm-6 cor1">
-	 				<div class="article-blue">
-	 					<div class="article-blue-num">1</div>
-	 					<h1>Pensado para<br> ser amigável</h1>
-	 					<h2>Speed up the line with quick, easy modifiers Light soy, extra noodles—item modifiers make it simple and efficient to get your customers’ orders just right.</h2>
-	 				</div>
-	 				<div class="article-black">
-	 					<div class="article-black-num">2</div>
-	 					<h1>Elimina tarefas<br> repetitivas</h1>
-	 					<h2>Speed up the line with quick, easy modifiers Light soy, extra noodles.</h2>
-	 				</div>
-	 			</div>
-	            <div class="col-sm-6 cor2">
-	            	<div class="article-purple">
-	            		<div class="article-purple-num">3</div>
-	            		<h1>Focado em<br> processos</h1>
-	 					<h2>Speed up the line with quick, easy modifiers Light soy, extra noodles—item modifiers make it simple and efficient to get your customers’ orders just right.
-
-Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde 
-o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos 
-e os embaralhou para fazer um livro.<br><br><br>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde 
-o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos 
-e os embaralhou para fazer um livro.</h2>
-
-	            	</div>
-	            </div>
-	        </div>
-        </div>
-        <!--  Article  -->
-
-
-        <footer>
-        	<div class="container">
-      			<div class="footer-left-center">
-      				© 2015 Caju Tecnologia
-      			</div>
-      			<div class="footer-right">
-	      			<div class="footer-social">
-	      				<a href=""><div id=footer-google></div></a>
-	      				<a href=""><div id=footer-facebook></div></a>
-	      			    Rede Sociais
-	      			</div>
-	      		
-	      			<div class="footer-mail">
-	      			    E-mail: 
-	      			    <a href="mailto:teste@caju.com.br" target="_top">teste@caju.com.br</a>
-	      			</div>
-	      		
-	      			<div class="footer-phone">
-	      			    +55 (81) 3212-1546
-	      			</div>
-      			</div>
-       		</div>
-        </footer>
-        <!--  Footer  -->
-
+		<div ng-include="'main.html'"></div>
+		<div ng-include="'footer.html'"></div>
 
 		<!-- Bootstrap -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	    <script src="js/bootstrap/bootstrap.min.js"></script>	
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- jQuery -->
+		<script src="./bower_components/jquery/dist/jquery.js"></script>
+		<!-- AngularJS -->
+		<script src="./bower_components/angular/angular.js"></script>
     </body>
 </html>

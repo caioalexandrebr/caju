@@ -587,15 +587,13 @@ footer .right .footer-social #facebook {
   height: 18px;
   float: left;
   margin-right: 8px;
-  background-repeat: no-repeat;
-  background-image: url(img/footer-facebook.png);
+  background: url(img/footer-facebook.png) no-repeat;
 }
 footer .right .footer-social #google {
   width: 18px;
   height: 18px;
   float: left;
   margin-right: 8px;
-  background-repeat: no-repeat;
-  background-image: url(img/footer-google.png);
+  background: url(img/footer-google.png) no-repeat;
 }
-/* Footer */
+/* ------------ Footer ------------ */

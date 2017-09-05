@@ -415,131 +415,119 @@ input[type=submit]:hover {
   line-height: 1.5;
 }
 /* Section Diferencial */
-.article-blue {
+article {
   max-width: 555px;
-  min-height: 450px;
-  background-color: #3598c1;
-  background-image: url(img/article-blue-bg.png);
-  background-position: right bottom;
-  background-repeat: no-repeat;
 }
-.article-blue-num {
+.blue {
+  min-height: 450px;
+  background: #3598c1 url(img/article-blue-bg.png) right bottom no-repeat;
+}
+.blue h1 {
+  max-width: 100%;
+  margin-top: 60px;
+  padding-left: 60px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.blue h2 {
+  margin-top: 40px;
+  max-width: 440px;
+  padding: 0 40px 0 60px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.blue .num-blue {
   width: 82px;
   height: 82px;
+  display: table-cell;
   background-color: #68b2d1;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
   font-family: "Open Sans";
   text-decoration: none;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffffff;
-  display: table-cell;
   vertical-align: middle;
 }
-.article-blue h1 {
-  max-width: 100%;
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-size: 36px;
-  font-weight: 700;
-  padding-left: 60px;
-  color: #ffffff;
-  margin-top: 60px;
-}
-.article-blue h2 {
-  max-width: 440px;
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 60px;
-  padding-right: 40px;
-  color: #ffffff;
-  margin-top: 40px;
-}
-.article-black {
-  max-width: 555px;
-  min-height: 355px;
+.black {
   margin-top: 15px;
+  min-height: 355px;
   background-color: #414a53;
 }
-.article-black-num {
+.black h1 {
+  max-width: 100%;
+  margin-top: 60px;
+  padding-left: 60px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.black h2 {
+  margin-top: 40px;
+  max-width: 440px;
+  padding: 0 40px 0 60px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.black .num-black {
   width: 82px;
   height: 82px;
+  display: table-cell;
   background-color: #71777e;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
   font-family: "Open Sans";
   text-decoration: none;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffffff;
-  display: table-cell;
   vertical-align: middle;
 }
-.article-black h1 {
-  max-width: 100%;
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-size: 36px;
-  font-weight: 700;
-  padding-left: 60px;
-  color: #ffffff;
-  margin-top: 60px;
-}
-.article-black h2 {
-  max-width: 440px;
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 60px;
-  padding-right: 40px;
-  color: #ffffff;
-  margin-top: 40px;
-}
-.article-purple {
-  max-width: 555px;
+.purple {
   min-height: 820px;
-  background-color: #8161e7;
-  background-image: url(img/article-purple-bg.png);
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  background: #8161e7 url(img/article-purple-bg.png) right bottom no-repeat;
 }
-.article-purple-num {
+.purple h1 {
+  max-width: 100%;
+  margin-top: 60px;
+  padding-left: 60px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.purple h2 {
+  margin-top: 40px;
+  max-width: 440px;
+  padding: 0 40px 0 60px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.purple .num-purple {
   width: 82px;
   height: 82px;
+  display: table-cell;
   background-color: #a189ed;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
   font-family: "Open Sans";
   text-decoration: none;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffffff;
-  display: table-cell;
   vertical-align: middle;
 }
-.article-purple h1 {
-  max-width: 100%;
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-size: 36px;
-  font-weight: 700;
-  padding-left: 60px;
-  color: #ffffff;
-  margin-top: 60px;
-}
-.article-purple h2 {
-  max-width: 440px;
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 300;
-  padding-left: 60px;
-  padding-right: 40px;
-  color: #ffffff;
-  margin-top: 40px;
-}
-/* Article */
+/* ------------ Article ------------ */
 footer {
   width: 100%;
   height: 150px;

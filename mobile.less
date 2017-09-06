@@ -1,0 +1,673 @@
+@white: #FFFFFF;
+@black: #000000;
+
+@colorfooter: #333b43;
+@colorheader: #1e2327;
+@colorborder: #dddddd;
+@colorscroll: #666;
+
+@color1: #6fa5f7;
+@color2: #9196a8;
+@color3: #5d81b6;
+@color4: #797d8c;
+@color5: #f8f8f8;
+@color6: #5b95ed;
+@color7: #3b4048;
+
+@colornumblue: #68b2d1;
+@colornumblack: #71777e;
+@colornumpurple: #a189ed;
+
+@colorarticleblue: #3598c1;
+@colorarticleblack: #414a53;
+@colorarticlepurple: #8161e7;
+
+@rgb1: rgba(255, 255, 255, .1); 
+@rgb2: rgba(255, 255, 255, .2); 
+
+@size1: 12px;
+@size2: 14px;
+@size3: 16px;
+@size4: 20px;
+@size5: 36px;
+@size6: 52px;
+
+@font1: "Open Sans";
+@font2: 'SorceSanspro', Sans-Serif;
+@font3: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@weight: 600;
+
+@base-url: "img";
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
+.macbook{
+	display:none;
+    background: #fff;
+}
+.header-footer{
+	display:none;
+    background: #fff;
+}
+footer .right{
+	display:none;
+    background: #fff;
+}
+.header-nav-desktop{
+	display:none;
+    background: #fff;
+}
+.header-desktop{
+	display:none;
+    background: #fff;
+}
+/* Clear Footer Header end Header Desktop */
+
+
+body {
+	min-height: 100%;
+    width: 100%;
+    background: #fff;
+}
+::-webkit-scrollbar { 
+	width: 10px; 
+	height: 10px; 
+	-webkit-border-radius: 16px; 
+} 
+::-webkit-scrollbar-track-piece { 
+	background-color: #ffffff; 
+	-webkit-border-radius: 3px; 
+} 
+::-webkit-scrollbar-thumb:vertical { 
+	height: 5px; 
+	background-color: #666; 
+	-webkit-border-radius: 3px; 
+} 
+::-webkit-scrollbar-thumb:horizontal { 
+	width: 5px; 
+	background-color: #666; 
+	-webkit-border-radius: 3px; 
+}
+/* Body e Scroll */
+
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 100px;
+}
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	width: 100%;
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color: #000;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+nav ul li ul li:hover { background: #000000; }
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px; 
+}
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+/* Media Queries
+--------------------------------------------- */
+@media all and (max-width : 1024px) {
+
+	nav {
+		margin: 0;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		width: 40px;
+		height: 40px;
+		display: block;
+		float: right;
+		line-height: 1.1;
+		color:#FFF;
+		font-size:38px;
+		text-decoration:none;
+		border:none;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-right: 20px;
+	}
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #000000;
+	}
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  	nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #212121; 
+	}
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ff5599;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+	}
+}
+/* Início estilos Menu DropDown Mobile */
+@media all and (max-width : 220px) {
+
+	.header-logo-mobile{
+	width: 76px !important;
+	}
+	.toggle {
+	width: 24px;
+	height: 40px;
+	line-height: 1.6;
+	font-size:26px;
+	}
+}
+/* Logo Least Resolution  */
+
+
+.menu li a {
+	color:#fff;
+	font-family: "Open Sans";
+	font-weight: 500;
+	font-size: 18px;
+	text-decoration:none;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	-o-transition: 0.5s ease-in;
+	transition: 0.5s ease-in;
+}
+.menu li a:focus, a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+.menu li a:focus {
+	outline:5px auto -webkit-focus-ring-color;
+	outline-offset:-2px;
+}
+.menu li{
+ 	background-color: #1c1e1f;
+ 	border-bottom: 1px solid #262829;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	-o-transition: 0.5s ease-in;
+	transition: 0.5s ease-in;
+}
+.menu li a:hover {
+ 	background-color: #6fa5f7;
+}
+/* Menu DropDown Mobile */
+
+
+.header-mobile{
+	width: 100%;
+	height: 100px;
+    background-color: #222426;
+    .header-logo-mobile{
+        margin-top: 30px;
+        margin-left: 20px;
+        background-color: @white;
+        width: 130px;
+        height: 40px;
+        float: left;
+        h1{
+            font-family: @font1;
+            text-decoration: none;
+            font-weight: @weight;
+            font-size: @size4;
+            color: @black;
+            margin-top: 8px;
+        }
+    }
+}
+/* ------------ Header Mobile ------------ */
+
+header{
+    background: -webkit-linear-gradient(#2c2f31, #262a2d);
+    background: -o-linear-gradient(#2c2f31, #262a2d);
+    background: -moz-linear-gradient(#2c2f31, #262a2d);
+    background: linear-gradient(#2c2f31,#262a2d);
+    background-size:100%;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top:0;
+    .header-title{
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        h1{
+            color: @white;
+            font-size: @size5;
+            font-family: @font1;
+        }
+        h2{
+            color: @color2;
+            line-height: 1.5;
+            font-size: @size1;
+            font-family: @font1;
+        }
+        h3{
+            margin-top: 50px;
+            color: @color3;
+            font-size: @size1;
+            font-style: italic;
+            font-family: @font1;
+        }
+    }
+}
+/* ------------ Header ------------ */
+
+.header-form {
+    width: 100%;
+    margin: 0 auto;
+    input[name="name"] {
+        font-family: @font1;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form1.png');
+        background-position: 10px 10px; 
+        border: 2px solid transparent;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-weight: @weight;
+        font-size: @size1;
+        width: 100%;
+        float: left;
+        color: @white;
+        outline: 0;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
+        transition: 0.5s ease-in;
+    }
+    input[name="name"]:focus {
+        background-color: @rgb2; 
+        background-image: url('');
+        padding: 12px 20px 12px 20px;
+    }
+    input[name="email"] {
+        font-family: @font1;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form2.png');
+        background-position: 10px 10px; 
+        border: 2px solid transparent;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-weight: @weight;
+        font-size: @size1;
+        width: 100%;
+        float: left;
+        color: @white;
+        outline: 0;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
+        transition: 0.5s ease-in;
+    }
+    input[name="email"]:focus {
+        background-color: @rgb2; 
+        background-image: url('');
+        padding: 12px 20px 12px 20px;
+    }
+    input[name="phone"] {
+        font-family: @font1;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form3.png');
+        background-position: 10px 10px; 
+        border: 2px solid transparent;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-weight: @weight;
+        font-size: @size1;
+        width: 100%;
+        float: right;
+        color: @white;
+        outline: 0;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
+        transition: 0.5s ease-in;
+    }
+    input[name="phone"]:focus {
+        background-color: @rgb2; 
+        background-image: url('');
+        padding: 12px 20px 12px 20px;
+    }
+    input[name="mens"] {
+        font-family: @font1;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form4.png');
+        background-position: 10px 10px; 
+        border: 2px solid transparent;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-weight: @weight;
+        font-size: @size1;
+        width: 100%;
+        float: left;
+        color: @white;
+        outline: 0;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
+        transition: 0.5s ease-in;
+    }
+    input[name="mens"]:focus {
+        background-color: @rgb2; 
+        background-image: url('');
+        padding: 12px 20px 12px 20px;
+    }
+    input[class="bt"] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        background-color: @color1;
+        padding: 16px 0px 16px 0px;
+        outline: 0;
+        color: @white;
+        font-family: @font1;
+        font-size: @size1;
+        font-weight: @weight;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
+        transition: 0.5s ease-in;
+    }
+    input[type=submit]:hover {
+        background: @color6;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: @white;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: @white;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: @white;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: @white;
+    }
+}
+/* ------------ Formulário ------------ */
+
+section{
+    .diferencial{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-family: @font1;
+        padding: 40px 0 40px 0;
+        h1{
+            line-height: 1.5;
+            color: @color7;
+            font-size: @size4;
+        }
+        h2{
+            color: @color2;
+            line-height: 1.5;
+            font-size: @size1;
+        }
+    }
+}
+/* ------------ Section Diferencial ------------ */
+
+article{
+    width: 95%;
+    margin: 0 auto;
+}
+.blue{
+    min-height: 300px;
+    background: @colorarticleblue;
+    h1{
+        max-width: 100%;
+        margin-top: 30px;
+        padding-left: 30px;
+        color: @white;
+        font-size: @size5;
+        font-weight: @weight;
+        font-family: @font1;
+        text-decoration: none;
+    }
+    h2{
+        margin-top: 30px;
+        max-width: 440px;
+        padding: 0 30px 30px 40px;
+        color: @white;
+        font-size: @size3;
+        font-family: @font1;
+        text-decoration: none;
+    }
+    .num-blue{
+        width: 62px;
+        height: 62px;
+        display: table-cell;  
+        background-color: @colornumblue;
+        color: @white;
+        font-size: @size5;
+        font-weight: @weight;
+        text-align: center;
+        font-family: @font1;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+}
+.black{
+    min-height: 260px;
+    background-color: @colorarticleblack;
+    h1{
+        max-width: 100%;
+        margin-top: 30px;
+        padding-left: 30px;
+        color: @white;
+        font-size: @size5;
+        font-weight: @weight;
+        font-family: @font1;
+        text-decoration: none;
+    }
+    h2{
+        margin-top: 30px;
+        max-width: 440px;
+        padding: 0 30px 30px 40px;
+        color: @white;
+        font-size: @size3;
+        font-family: @font1;
+        text-decoration: none;
+    }
+    .num-black{
+        width: 62px;
+        height: 62px;
+        display: table-cell;  
+        background-color: @colornumblack;
+        color: @white;
+        font-size: @size5;
+        font-weight: @weight;
+        text-align: center;
+        font-family: @font1;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+}
+.purple{
+    min-height: 570px;
+    background: @colorarticlepurple;
+    h1{
+        max-width: 100%;
+        margin-top: 30px;
+        padding-left: 30px;
+        color: @white;
+        font-size: @size5;
+        font-weight: @weight;
+        font-family: @font1;
+        text-decoration: none;
+    }
+    h2{
+        margin-top: 30px;
+        max-width: 440px;
+        padding: 0 30px 30px 40px;
+        color: @white;
+        font-size: @size3;
+        font-family: @font1;
+        text-decoration: none;
+    }
+    .num-purple{
+        width: 62px;
+        height: 62px;
+        display: table-cell;  
+        background-color: @colornumpurple;
+        color: @white;
+        font-size: @size5;
+        font-weight: @weight;
+        text-align: center;
+        font-family: @font1;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+}
+/* ------------ Article ------------ */
+
+footer { 
+	width: 100%;
+	height: 66px;
+    display: block;
+    margin-top: 40px;
+	background-color: @colorfooter;
+    color: @color2;
+    font-size: @size2;
+    text-align: center;
+	font-family: @font1;
+	text-decoration: none;
+    .left{
+        margin-top: 16px;
+        font-size: @size2;
+        padding: 10px 20px 10px 20px;
+    }
+}
+/* ------------ Footer ------------ */

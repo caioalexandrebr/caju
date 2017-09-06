@@ -5,6 +5,8 @@
 
 @color1: #6fa5f7;
 @color2: #9196a8;
+@color3: #5d81b6;
+@color4: #797d8c;
 
 @size1: 12px;
 @size2: 14px;
@@ -52,94 +54,88 @@ body {
 
 
 header{
-	background-image: url(img/bg.jpg);
-    background-repeat: no-repeat;
- 	background-color: #1e2327;
-    background-size:100%;
+	background:#1e2327 url(img/bg.jpg) no-repeat;
+    background-size: 100%;
     text-align: center;
-    color: black;
     width: 100%;
     left: 0;
     top:0;
-}
-header h1{
-	font-family: @font1;
-	font-size: 52px;
-	font-weight: 200;
-	color: @white;
-}
-header h2{
-	font-family: @font1;
-	font-size: 16px;
-	font-weight: 600;
-	color: #899097;
-}
-header h3{
-	font-family: @font1;
-	font-size: 15px;
-	font-style:italic;
-	font-weight: 600;
-	color: #5d81b6;
-	margin-top: 50px;
+    .header-title{
+        width: 490px;
+        height: auto;
+        margin: 0 auto;
+        h1{
+            color: @white;
+            font-size: 52px;
+            font-weight: 200;
+            font-family: @font1;
+        }
+        h2{
+            color: @color2;
+            line-height: 1.5;
+            font-size: @size3;
+            font-family: @font1;
+        }
+        h3{
+            margin-top: 50px;
+            color: @color3;
+            font-size: @size3;
+            font-style: italic;
+            font-family: @font1;
+        }
+    }
 }
 .header-desktop{
 	padding-top: 50px;
 	width: 100%;
-	height: 140px;
-}
-.header-desktop .logo{
-	background-color: @white;
-	width: 180px;
-	height: 40px;
-	float: left;
-}
-.header-desktop .logo h1{
-	font-family: @font1;
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 20px;
-	color: #000;
-	margin-top: 8px;
-}
-.header-nav-desktop{
-	float: right;
-	height: 40px;
-}
-.header-nav-desktop ul{
-	margin-left: -70px;
-}
-.header-nav-desktop ul li{
-	float: left;
-	list-style-type: none;
-	margin-left: 30px;
-}
-.header-nav-desktop ul li a{
-	font-family: @font1;
-	font-size: 18px;
-	font-weight: 500;
-	color: #797d8c;
-	text-decoration: none;
-}
-.header-nav-desktop ul li a:hover{
-	color: @color1;
-}
-.header-phone-desktop{
-	font-family: @font1;
-	text-decoration: none;
-	padding-left: 24px;
-	font-weight: 500;
-	margin-right: 4%;
-	font-size: 16px;
-	margin-left: 4%;
-	color: @color1;
-	float: right;
-
-	background-image: url(img/phone.png);
-	background-repeat: no-repeat;
-}
-.header-title{
-	width: 490px;
-	margin: 0 auto;
+    height: 140px;
+    a{
+        .logo{
+            float: left;
+            width: 180px;
+            height: 40px;
+            padding-top: 4px;
+            background-color: @white;
+            color: @black;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: @font1;
+            text-decoration: none;
+        }
+    }
+    .header-phone-desktop{
+        font-family: @font1;
+        text-decoration: none;
+        padding-left: 24px;
+        font-weight: 500;
+        margin-right: 4%;
+        font-size: 16px;
+        margin-left: 4%;
+        color: @color1;
+        float: right;
+        background: url(img/phone.png) no-repeat;
+    }
+    .header-nav-desktop{
+        float: right;
+        height: 40px;
+        ul{
+            margin-left: -70px;
+            li{
+                float: left;
+                margin-left: 30px;
+                list-style-type: none;
+                a{
+                    color: @color4;
+                    font-size: @size4;
+                    font-family: @font1;
+                    text-decoration: none;
+                    &:hover{
+                        color: @color1;
+                    }
+                }
+            }
+        }
+    }
 }
 /* Header */
 

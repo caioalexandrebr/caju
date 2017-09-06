@@ -30,78 +30,55 @@ body {
 }
 /* Body e Scroll */
 header {
-  background-image: url(img/bg.jpg);
-  background-repeat: no-repeat;
-  background-color: #1e2327;
+  background: #1e2327 url(img/bg.jpg) no-repeat;
   background-size: 100%;
   text-align: center;
-  color: black;
   width: 100%;
   left: 0;
   top: 0;
 }
-header h1 {
-  font-family: "Open Sans";
+header .header-title {
+  width: 490px;
+  height: auto;
+  margin: 0 auto;
+}
+header .header-title h1 {
+  color: #ffffff;
   font-size: 52px;
   font-weight: 200;
-  color: #ffffff;
-}
-header h2 {
   font-family: "Open Sans";
+}
+header .header-title h2 {
+  color: #9196a8;
+  line-height: 1.5;
   font-size: 16px;
-  font-weight: 600;
-  color: #899097;
-}
-header h3 {
   font-family: "Open Sans";
-  font-size: 15px;
-  font-style: italic;
-  font-weight: 600;
-  color: #5d81b6;
+}
+header .header-title h3 {
   margin-top: 50px;
+  color: #5d81b6;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "Open Sans";
 }
 .header-desktop {
   padding-top: 50px;
   width: 100%;
   height: 140px;
 }
-.header-desktop .logo {
-  background-color: #ffffff;
+.header-desktop a .logo {
+  float: left;
   width: 180px;
   height: 40px;
-  float: left;
-}
-.header-desktop .logo h1 {
-  font-family: "Open Sans";
-  text-decoration: none;
-  font-weight: 600;
+  padding-top: 4px;
+  background-color: #ffffff;
+  color: #000000;
   font-size: 20px;
-  color: #000;
-  margin-top: 8px;
-}
-.header-nav-desktop {
-  float: right;
-  height: 40px;
-}
-.header-nav-desktop ul {
-  margin-left: -70px;
-}
-.header-nav-desktop ul li {
-  float: left;
-  list-style-type: none;
-  margin-left: 30px;
-}
-.header-nav-desktop ul li a {
+  font-weight: 600;
   font-family: "Open Sans";
-  font-size: 18px;
-  font-weight: 500;
-  color: #797d8c;
   text-decoration: none;
 }
-.header-nav-desktop ul li a:hover {
-  color: #6fa5f7;
-}
-.header-phone-desktop {
+.header-desktop .header-phone-desktop {
   font-family: "Open Sans";
   text-decoration: none;
   padding-left: 24px;
@@ -111,12 +88,28 @@ header h3 {
   margin-left: 4%;
   color: #6fa5f7;
   float: right;
-  background-image: url(img/phone.png);
-  background-repeat: no-repeat;
+  background: url(img/phone.png) no-repeat;
 }
-.header-title {
-  width: 490px;
-  margin: 0 auto;
+.header-desktop .header-nav-desktop {
+  float: right;
+  height: 40px;
+}
+.header-desktop .header-nav-desktop ul {
+  margin-left: -70px;
+}
+.header-desktop .header-nav-desktop ul li {
+  float: left;
+  margin-left: 30px;
+  list-style-type: none;
+}
+.header-desktop .header-nav-desktop ul li a {
+  color: #797d8c;
+  font-size: 18px;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.header-desktop .header-nav-desktop ul li a:hover {
+  color: #6fa5f7;
 }
 /* Header */
 .formheader {

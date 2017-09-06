@@ -277,8 +277,9 @@ input[type=submit]:hover {
 .macbook {
   width: 690px;
   height: 400px;
-  margin: 0 auto;
-  background-image: url(img/mac.png);
+  margin: -10px auto;
+  position: relative;
+  background: url(img/mac.png) no-repeat;
 }
 .header-footer {
   width: 100%;
@@ -334,7 +335,7 @@ input[type=submit]:hover {
 .header-footer .header-footer-center .box .fourth {
   background-image: url(img/footer-header4.png);
 }
-/* Footer Header */
+/* ------------ Header-Footer ------------ */
 section .diferencial {
   width: 100%;
   height: auto;
@@ -353,7 +354,7 @@ section .diferencial h2 {
   line-height: 1.5;
   font-size: 16px;
 }
-/* Section Diferencial */
+/* ------------ Section Diferencial ------------ */
 article {
   max-width: 555px;
 }

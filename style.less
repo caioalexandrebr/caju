@@ -2,19 +2,43 @@
 @black: #000000;
 
 @colorfooter: #333b43;
+@colorheader: #1e2327;
+@colorborder: #dddddd;
+@colorscroll: #666;
 
 @color1: #6fa5f7;
 @color2: #9196a8;
 @color3: #5d81b6;
 @color4: #797d8c;
+@color5: #f8f8f8;
+@color6: #5b95ed;
+@color7: #3b4048;
+
+@colornumblue: #68b2d1;
+@colornumblack: #71777e;
+@colornumpurple: #a189ed;
+
+@colorarticleblue: #3598c1;
+@colorarticleblack: #414a53;
+@colorarticlepurple: #8161e7;
+
+@rgb1: rgba(255, 255, 255, .1); 
+@rgb2: rgba(255, 255, 255, .2); 
 
 @size1: 12px;
 @size2: 14px;
 @size3: 16px;
-@size4: 18px;
+@size4: 20px;
+@size5: 36px;
+@size6: 52px;
 
 @font1: "Open Sans";
 @font2: 'SorceSanspro', Sans-Serif;
+@font3: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@weight: 600;
+
+@base-url: "img";
 
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
@@ -25,10 +49,9 @@
 }
 /* Clear Header Mobile */
 
-
 body {
-	min-height: 100%;
     width: 100%;
+	min-height: 100%;
     background: @white;
 }
 ::-webkit-scrollbar { 
@@ -42,19 +65,18 @@ body {
 } 
 ::-webkit-scrollbar-thumb:vertical { 
 	height: 5px; 
-	background-color: #666; 
+	background-color: @colorscroll; 
 	-webkit-border-radius: 3px; 
 } 
 ::-webkit-scrollbar-thumb:horizontal { 
 	width: 5px; 
-	background-color: #666; 
+	background-color: @colorscroll; 
 	-webkit-border-radius: 3px; 
 }
-/* Body e Scroll */
-
+/* ------------ Body ------------ */
 
 header{
-	background:#1e2327 url(img/bg.jpg) no-repeat;
+	background: @colorheader url('@{base-url}/bg.jpg') no-repeat;
     background-size: 100%;
     text-align: center;
     width: 100%;
@@ -66,8 +88,7 @@ header{
         margin: 0 auto;
         h1{
             color: @white;
-            font-size: 52px;
-            font-weight: 200;
+            font-size: @size6;
             font-family: @font1;
         }
         h2{
@@ -86,9 +107,9 @@ header{
     }
 }
 .header-desktop{
-	padding-top: 50px;
 	width: 100%;
     height: 140px;
+    padding-top: 50px;
     a{
         .logo{
             float: left;
@@ -97,23 +118,22 @@ header{
             padding-top: 4px;
             background-color: @white;
             color: @black;
-            font-size: 20px;
-            font-weight: 600;
+            font-size: @size4;
+            font-weight: @weight;
             font-family: @font1;
             text-decoration: none;
         }
     }
     .header-phone-desktop{
-        font-family: @font1;
         text-decoration: none;
+        font-family: @font1;
         padding-left: 24px;
-        font-weight: 500;
         margin-right: 4%;
-        font-size: 16px;
+        font-size: @size3;
         margin-left: 4%;
         color: @color1;
         float: right;
-        background: url(img/phone.png) no-repeat;
+        background: url('@{base-url}/phone.png') no-repeat;
     }
     .header-nav-desktop{
         float: right;
@@ -138,15 +158,15 @@ header{
     }
 
 }
-/* Header */
+/* ------------ Header ------------ */
 
 .header-form {
     width: 430px;
     margin: 0 auto;
     input[name="name"] {
-        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background-color: rgba(255, 255, 255, .1); 
-        background-image: url(img/form1.png);
+        font-family: @font3;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form1.png');
         background-position: 10px 10px; 
         border: 2px solid transparent;
         background-repeat: no-repeat;
@@ -155,8 +175,8 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: 600;
-        font-size: 12px;
+        font-weight: @weight;
+        font-size: @size1;
         width: 430px;
         float: left;
         color: @white;
@@ -167,14 +187,14 @@ header{
         transition: 0.5s ease-in;
     }
     input[name="name"]:focus {
-        background-color: rgba(255, 255, 255, .2); 
+        background-color: @rgb2; 
         background-image: url('');
         padding: 12px 20px 12px 20px;
     }
     input[name="email"] {
-        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background-color: rgba(255, 255, 255, .1); 
-        background-image: url(img/form2.png);
+        font-family: @font3;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form2.png');
         background-position: 10px 10px; 
         border: 2px solid transparent;
         background-repeat: no-repeat;
@@ -183,8 +203,8 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: 600;
-        font-size: 12px;
+        font-weight: @weight;
+        font-size: @size1;
         width: 210px;
         float: left;
         color: @white;
@@ -195,14 +215,14 @@ header{
         transition: 0.5s ease-in;
     }
     input[name="email"]:focus {
-        background-color: rgba(255, 255, 255, .2); 
+        background-color: @rgb2; 
         background-image: url('');
         padding: 12px 20px 12px 20px;
     }
     input[name="phone"] {
-        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background-color: rgba(255, 255, 255, .1); 
-        background-image: url(img/form3.png);
+        font-family: @font3;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form3.png');
         background-position: 10px 10px; 
         border: 2px solid transparent;
         background-repeat: no-repeat;
@@ -211,8 +231,8 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: 600;
-        font-size: 12px;
+        font-weight: @weight;
+        font-size: @size1;
         width: 210px;
         float: right;
         color: @white;
@@ -223,14 +243,14 @@ header{
         transition: 0.5s ease-in;
     }
     input[name="phone"]:focus {
-        background-color: rgba(255, 255, 255, .2); 
+        background-color: @rgb2; 
         background-image: url('');
         padding: 12px 20px 12px 20px;
     }
     input[name="mens"] {
-        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background-color: rgba(255, 255, 255, .1); 
-        background-image: url(img/form4.png);
+        font-family: @font3;
+        background-color: @rgb1;
+        background-image: url('@{base-url}/form4.png');
         background-position: 10px 10px; 
         border: 2px solid transparent;
         background-repeat: no-repeat;
@@ -239,8 +259,8 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: 600;
-        font-size: 12px;
+        font-weight: @weight;
+        font-size: @size1;
         width: 430px;
         float: left;
         color: @white;
@@ -251,7 +271,7 @@ header{
         transition: 0.5s ease-in;
     }
     input[name="mens"]:focus {
-        background-color: rgba(255, 255, 255, .2); 
+        background-color: @rgb2; 
         background-image: url('');
         padding: 12px 20px 12px 20px;
     }
@@ -264,9 +284,9 @@ header{
         padding: 16px 0px 16px 0px;
         outline: 0;
         color: @white;
-        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 12px;
-        font-weight: 600;
+        font-family: @font3;
+        font-size: @size1;
+        font-weight: @weight;
         text-transform: uppercase;
         margin-bottom: 60px;
         -webkit-transition: 0.5s ease-in;
@@ -275,7 +295,7 @@ header{
         transition: 0.5s ease-in;
     }
     input[type=submit]:hover {
-        background: #5b95ed;
+        background: @color6;
     }
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       color: @white;
@@ -298,39 +318,39 @@ header{
 	height: 400px;
     margin: -10px auto;
     position: relative;
-	background: url(img/mac.png) no-repeat;
+	background: url('@{base-url}/mac.png') no-repeat;
 }
 .header-footer{
 	width: 100%;
 	height: 310px;
-    background-color: #f8f8f8;
+    background-color: @color5;
     .header-footer-center{
         height: 310px;
         margin: 0 auto;
         max-width: 1920px;
         .border{
-            border-left: 1px solid #dddddd;
+            border-left: 1px solid @colorborder;
         }
         .box{
             width: 25%;
             float: left;
             height: 100%;
             padding-top: 50px;
-            background-color: #f8f8f8;
-            border-right: 1px solid #dddddd;
+            background-color: @color5;
+            border-right: 1px solid @colorborder;
             h1{
                 color: @color1;
-                font-size: 19px;
-                font-weight: 600;
+                font-size: @size4;
                 text-align: center;
                 font-family: @font2;
+                font-weight: @weight;
             }
             h2{
                 margin: 0 auto;
                 color: @color2;
                 max-width: 290px;
-                font-size: @size3;
                 line-height: 1.5;
+                font-size: @size3;
                 text-align: center;
                 font-family: @font2;
             }
@@ -340,16 +360,16 @@ header{
                 margin: 0 auto;
             }
             .first{
-                background-image: url(img/footer-header1.png);
+                background-image: url('@{base-url}/footer-header1.png');
             }
             .second{
-                background-image: url(img/footer-header2.png);
+                background-image: url('@{base-url}/footer-header2.png');
             }
             .third{
-                background-image: url(img/footer-header3.png);
+                background-image: url('@{base-url}/footer-header3.png');
             }
             .fourth{
-                background-image: url(img/footer-header4.png);
+                background-image: url('@{base-url}/footer-header4.png');
             }
         }
     }
@@ -364,10 +384,9 @@ section{
         font-family: @font1;
         padding: 40px 0 40px 0;
         h1{
-            font-size: 36px;
-            font-weight: 400;
-            color: #3b4048;
             line-height: 1.5;
+            color: @color7;
+            font-size: @size5;
         }
         h2{
             color: @color2;
@@ -383,15 +402,14 @@ article{
 }
 .blue{
     min-height: 450px;
-    background:#3598c1 url(img/article-blue-bg.png) right bottom no-repeat;
+    background: @colorarticleblue url('@{base-url}/article-blue-bg.png') right bottom no-repeat;
     h1{
         max-width: 100%;
         margin-top: 60px;
         padding-left: 60px;
-
         color: @white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: @size5;
+        font-weight: @weight;
         font-family: @font1;
         text-decoration: none;
     }
@@ -399,7 +417,6 @@ article{
         margin-top: 40px;
         max-width: 440px;
         padding: 0 40px 0 60px;
-
         color: @white;
         font-size: @size3;
         font-family: @font1;
@@ -409,11 +426,10 @@ article{
         width: 82px;
         height: 82px;
         display: table-cell;  
-        background-color: #68b2d1;
-        
+        background-color: @colornumblue;
         color: @white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: @size5;
+        font-weight: @weight;
         text-align: center;
         font-family: @font1;
         text-decoration: none;
@@ -423,15 +439,14 @@ article{
 .black{
     margin-top: 15px;
     min-height: 355px;
-    background-color: #414a53;
+    background-color: @colorarticleblack;
     h1{
         max-width: 100%;
         margin-top: 60px;
         padding-left: 60px;
-
         color: @white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: @size5;
+        font-weight: @weight;
         font-family: @font1;
         text-decoration: none;
     }
@@ -439,7 +454,6 @@ article{
         margin-top: 40px;
         max-width: 440px;
         padding: 0 40px 0 60px;
-
         color: @white;
         font-size: @size3;
         font-family: @font1;
@@ -449,11 +463,10 @@ article{
         width: 82px;
         height: 82px;
         display: table-cell;  
-        background-color: #71777e;
-        
+        background-color: @colornumblack;
         color: @white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: @size5;
+        font-weight: @weight;
         text-align: center;
         font-family: @font1;
         text-decoration: none;
@@ -462,15 +475,14 @@ article{
 }
 .purple{
     min-height: 820px;
-    background:#8161e7 url(img/article-purple-bg.png) right bottom no-repeat;
+    background: @colorarticlepurple url('@{base-url}/article-purple-bg.png') right bottom no-repeat;
     h1{
         max-width: 100%;
         margin-top: 60px;
         padding-left: 60px;
-
         color: @white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: @size5;
+        font-weight: @weight;
         font-family: @font1;
         text-decoration: none;
     }
@@ -478,7 +490,6 @@ article{
         margin-top: 40px;
         max-width: 440px;
         padding: 0 40px 0 60px;
-
         color: @white;
         font-size: @size3;
         font-family: @font1;
@@ -488,11 +499,10 @@ article{
         width: 82px;
         height: 82px;
         display: table-cell;  
-        background-color: #a189ed;
-        
+        background-color: @colornumpurple;
         color: @white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: @size5;
+        font-weight: @weight;
         text-align: center;
         font-family: @font1;
         text-decoration: none;
@@ -526,13 +536,13 @@ footer {
             float: left;
             width: 190px;
             padding-left: 30px;
-            background: url(img/footer-phone.png) 2px 2px no-repeat;
+            background: url('@{base-url}/footer-phone.png') 2px 2px no-repeat;
         }
         .footer-mail{
             float: left;
             width: 260px;
             padding-left: 30px;
-            background: url(img/footer-mail.png) 2px 2px no-repeat;
+            background: url('@{base-url}/footer-mail.png') 2px 2px no-repeat;
             a{
                 color: @color2;
                 text-decoration: none;
@@ -546,14 +556,14 @@ footer {
                 height: 18px;
                 float: left;
                 margin-right: 8px;
-                background: url(img/footer-facebook.png) no-repeat;
+                background: url('@{base-url}/footer-facebook.png') no-repeat;
            }
             #google{
                 width: 18px; 
                 height: 18px;
                 float: left;
                 margin-right: 8px;
-                background: url(img/footer-google.png) no-repeat;
+                background: url('@{base-url}/footer-google.png') no-repeat;
            }
         }
     }

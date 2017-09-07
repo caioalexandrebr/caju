@@ -488,13 +488,13 @@ footer .right {
 }
 footer .right .footer-phone {
   float: left;
-  width: 190px;
+  width: 160px;
   padding-left: 30px;
   background: url('img/footer-phone.png') 2px 2px no-repeat;
 }
 footer .right .footer-mail {
   float: left;
-  width: 260px;
+  width: 290px;
   padding-left: 30px;
   background: url('img/footer-mail.png') 2px 2px no-repeat;
 }
@@ -504,7 +504,7 @@ footer .right .footer-mail a {
 }
 footer .right .footer-social {
   float: left;
-  width: 170px;
+  width: 150px;
 }
 footer .right .footer-social #facebook {
   width: 18px;

@@ -474,6 +474,13 @@ footer .left {
   margin-top: 60px;
   padding: 10px 20px 10px 20px;
 }
+footer .left .footer_autor a {
+  color: #9196a8;
+  text-decoration: none;
+}
+footer .left .footer_autor a:hover {
+  color: #6fa5f7;
+}
 footer .right {
   float: right;
   margin-top: 60px;

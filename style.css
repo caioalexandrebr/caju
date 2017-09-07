@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 .header-mobile {
   display: none;
-  background: #ffffff;
 }
 /* Clear Header Mobile */
 body {

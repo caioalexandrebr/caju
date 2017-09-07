@@ -13,6 +13,10 @@
 @color5: #f8f8f8;
 @color6: #5b95ed;
 @color7: #3b4048;
+@color8: #222426;
+@color9: #212121;
+@color10: #1c1e1f;
+@color11: #262829;
 
 @colornumblue: #68b2d1;
 @colornumblack: #71777e;
@@ -36,40 +40,34 @@
 @font2: 'SorceSanspro', Sans-Serif;
 @font3: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@weight: 600;
+@weight1: 600;
+@weight2: 400;
 
 @base-url: "img";
-
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 .macbook{
 	display:none;
-    background: #fff;
 }
 .header-footer{
 	display:none;
-    background: #fff;
 }
 footer .right{
 	display:none;
-    background: #fff;
 }
 .header-nav-desktop{
 	display:none;
-    background: #fff;
 }
 .header-desktop{
 	display:none;
-    background: #fff;
 }
 /* Clear Footer Header end Header Desktop */
 
-
 body {
-	min-height: 100%;
     width: 100%;
-    background: #fff;
+	min-height: 100%;
+    background: @white;
 }
 ::-webkit-scrollbar { 
 	width: 10px; 
@@ -77,21 +75,20 @@ body {
 	-webkit-border-radius: 16px; 
 } 
 ::-webkit-scrollbar-track-piece { 
-	background-color: #ffffff; 
+	background-color: @white; 
 	-webkit-border-radius: 3px; 
 } 
 ::-webkit-scrollbar-thumb:vertical { 
 	height: 5px; 
-	background-color: #666; 
+	background-color: @colorscroll; 
 	-webkit-border-radius: 3px; 
 } 
 ::-webkit-scrollbar-thumb:horizontal { 
 	width: 5px; 
-	background-color: #666; 
+	background-color: @colorscroll; 
 	-webkit-border-radius: 3px; 
 }
-/* Body e Scroll */
-
+/* ------------ Body ------------ */
 
 .toggle,
 [id^=drop] {
@@ -126,21 +123,20 @@ nav ul li {
 	margin: 0px;
 	display:inline-block;
 	float: left;
-	background-color: #000;
+	background-color: @black;
 	}
-
 /* Styling the links */
 nav a {
 	display:block;
 	padding:14px 20px;	
-	color:#FFF;
+	color: @white;
 	font-size:17px;
 	text-decoration:none;
 }
-nav ul li ul li:hover { background: #000000; }
+nav ul li ul li:hover { background: @black; }
 /* Background color change on Hover */
 nav a:hover { 
-	background-color: #000000; 
+	background-color: @black; 
 }
 
 /* Hide Dropdowns by Default
@@ -178,18 +174,15 @@ li > a:only-child:after { content: ''; }
 /* Media Queries
 --------------------------------------------- */
 @media all and (max-width : 1024px) {
-
 	nav {
 		margin: 0;
 	}
-
 	/* Hide the navigation menu by default */
 	/* Also hide the  */
 	.toggle + a,
 	.menu {
 		display: none;
 	}
-
 	/* Stylinf the toggle lable */
 	.toggle {
 		width: 40px;
@@ -197,10 +190,10 @@ li > a:only-child:after { content: ''; }
 		display: block;
 		float: right;
 		line-height: 1.1;
-		color:#FFF;
-		font-size:38px;
-		text-decoration:none;
-		border:none;
+		color: @white;
+		font-size: 38px;
+		text-decoration: none;
+		border: none;
 		margin-top: 30px;
 		margin-bottom: 30px;
 		margin-right: 20px;
@@ -223,24 +216,23 @@ li > a:only-child:after { content: ''; }
 	}
 	nav a:hover,
  	nav ul ul ul a {
-		background-color: #000000;
+		background-color: @black;
 	}
 	nav ul li ul li .toggle,
 	nav ul ul a,
   	nav ul ul ul a{
 		padding:14px 20px;	
-		color:#FFF;
+		color: @white;
 		font-size:17px; 
 	}
 	nav ul li ul li .toggle,
 	nav ul ul a {
-		background-color: #212121; 
+		background-color: @color9; 
 	}
 	/* Hide Dropdowns by Default */
 	nav ul ul {
 		float: none;
 		position:static;
-		color: #ff5599;
 		/* has to be the same number as the "line-height" of "nav a" */
 	}
 	/* Hide menus on hover */
@@ -275,9 +267,9 @@ li > a:only-child:after { content: ''; }
 
 
 .menu li a {
-	color:#fff;
-	font-family: "Open Sans";
-	font-weight: 500;
+	color: @white;
+	font-family: @font1;
+	font-weight: @weight2;
 	font-size: 18px;
 	text-decoration:none;
 	-webkit-transition: 0.5s ease-in;
@@ -286,7 +278,7 @@ li > a:only-child:after { content: ''; }
 	transition: 0.5s ease-in;
 }
 .menu li a:focus, a:hover {
-	color:#fff;
+	color: @white;
 	text-decoration:none;
 }
 .menu li a:focus {
@@ -294,15 +286,15 @@ li > a:only-child:after { content: ''; }
 	outline-offset:-2px;
 }
 .menu li{
- 	background-color: #1c1e1f;
- 	border-bottom: 1px solid #262829;
+ 	background-color: @color10;
+ 	border-bottom: 1px solid @color11;
 	-webkit-transition: 0.5s ease-in;
 	-moz-transition: 0.5s ease-in;
 	-o-transition: 0.5s ease-in;
 	transition: 0.5s ease-in;
 }
 .menu li a:hover {
- 	background-color: #6fa5f7;
+ 	background-color: @color1;
 }
 /* Menu DropDown Mobile */
 
@@ -310,7 +302,7 @@ li > a:only-child:after { content: ''; }
 .header-mobile{
 	width: 100%;
 	height: 100px;
-    background-color: #222426;
+    background-color: @color8;
     .header-logo-mobile{
         margin-top: 30px;
         margin-left: 20px;
@@ -321,7 +313,7 @@ li > a:only-child:after { content: ''; }
         h1{
             font-family: @font1;
             text-decoration: none;
-            font-weight: @weight;
+            font-weight: @weight1;
             font-size: @size4;
             color: @black;
             margin-top: 8px;
@@ -334,7 +326,7 @@ header{
     background: -webkit-linear-gradient(#2c2f31, #262a2d);
     background: -o-linear-gradient(#2c2f31, #262a2d);
     background: -moz-linear-gradient(#2c2f31, #262a2d);
-    background: linear-gradient(#2c2f31,#262a2d);
+    background: linear-gradient(#2c2f31, #262a2d);
     background-size:100%;
     text-align: center;
     width: 100%;
@@ -381,7 +373,7 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-size: @size1;
         width: 100%;
         float: left;
@@ -409,7 +401,7 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-size: @size1;
         width: 100%;
         float: left;
@@ -437,7 +429,7 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-size: @size1;
         width: 100%;
         float: right;
@@ -465,7 +457,7 @@ header{
         box-sizing: border-box;
         margin-bottom: 10px;
         border-radius: 4px;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-size: @size1;
         width: 100%;
         float: left;
@@ -492,7 +484,7 @@ header{
         color: @white;
         font-family: @font1;
         font-size: @size1;
-        font-weight: @weight;
+        font-weight: @weight1;
         text-transform: uppercase;
         margin-bottom: 60px;
         -webkit-transition: 0.5s ease-in;
@@ -552,7 +544,7 @@ article{
         padding-left: 30px;
         color: @white;
         font-size: @size5;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-family: @font1;
         text-decoration: none;
     }
@@ -572,7 +564,7 @@ article{
         background-color: @colornumblue;
         color: @white;
         font-size: @size5;
-        font-weight: @weight;
+        font-weight: @weight1;
         text-align: center;
         font-family: @font1;
         text-decoration: none;
@@ -588,7 +580,7 @@ article{
         padding-left: 30px;
         color: @white;
         font-size: @size5;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-family: @font1;
         text-decoration: none;
     }
@@ -608,7 +600,7 @@ article{
         background-color: @colornumblack;
         color: @white;
         font-size: @size5;
-        font-weight: @weight;
+        font-weight: @weight1;
         text-align: center;
         font-family: @font1;
         text-decoration: none;
@@ -624,7 +616,7 @@ article{
         padding-left: 30px;
         color: @white;
         font-size: @size5;
-        font-weight: @weight;
+        font-weight: @weight1;
         font-family: @font1;
         text-decoration: none;
     }
@@ -644,7 +636,7 @@ article{
         background-color: @colornumpurple;
         color: @white;
         font-size: @size5;
-        font-weight: @weight;
+        font-weight: @weight1;
         text-align: center;
         font-family: @font1;
         text-decoration: none;

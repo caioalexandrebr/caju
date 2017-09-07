@@ -1,29 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 .macbook {
   display: none;
-  background: #fff;
 }
 .header-footer {
   display: none;
-  background: #fff;
 }
 footer .right {
   display: none;
-  background: #fff;
 }
 .header-nav-desktop {
   display: none;
-  background: #fff;
 }
 .header-desktop {
   display: none;
-  background: #fff;
 }
 /* Clear Footer Header end Header Desktop */
 body {
-  min-height: 100%;
   width: 100%;
-  background: #fff;
+  min-height: 100%;
+  background: #ffffff;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -36,15 +31,15 @@ body {
 }
 ::-webkit-scrollbar-thumb:vertical {
   height: 5px;
-  background-color: #666;
+  background-color: #666666;
   -webkit-border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:horizontal {
   width: 5px;
-  background-color: #666;
+  background-color: #666666;
   -webkit-border-radius: 3px;
 }
-/* Body e Scroll */
+/* ------------ Body ------------ */
 .toggle,
 [id^=drop] {
   display: none;
@@ -78,13 +73,13 @@ nav ul li {
   margin: 0px;
   display: inline-block;
   float: left;
-  background-color: #000;
+  background-color: #000000;
 }
 /* Styling the links */
 nav a {
   display: block;
   padding: 14px 20px;
-  color: #FFF;
+  color: #ffffff;
   font-size: 17px;
   text-decoration: none;
 }
@@ -150,7 +145,7 @@ li > a:only-child:after {
     display: block;
     float: right;
     line-height: 1.1;
-    color: #FFF;
+    color: #ffffff;
     font-size: 38px;
     text-decoration: none;
     border: none;
@@ -182,7 +177,7 @@ li > a:only-child:after {
   nav ul ul a,
   nav ul ul ul a {
     padding: 14px 20px;
-    color: #FFF;
+    color: #ffffff;
     font-size: 17px;
   }
   nav ul li ul li .toggle,
@@ -193,7 +188,6 @@ li > a:only-child:after {
   nav ul ul {
     float: none;
     position: static;
-    color: #ff5599;
     /* has to be the same number as the "line-height" of "nav a" */
   }
   /* Hide menus on hover */
@@ -225,9 +219,9 @@ li > a:only-child:after {
 }
 /* Logo Least Resolution  */
 .menu li a {
-  color: #fff;
+  color: #ffffff;
   font-family: "Open Sans";
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   text-decoration: none;
   -webkit-transition: 0.5s ease-in;
@@ -237,7 +231,7 @@ li > a:only-child:after {
 }
 .menu li a:focus,
 a:hover {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 .menu li a:focus {
